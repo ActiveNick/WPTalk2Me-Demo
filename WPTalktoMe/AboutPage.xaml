@@ -1,0 +1,147 @@
+﻿<phone:PhoneApplicationPage 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone" 
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:ig="clr-namespace:Infragistics.Controls.Barcodes;assembly=InfragisticsWP7.Controls.Barcodes.v12.2"
+    x:Class="WPTalktoMe.AboutPage"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True" mc:Ignorable="d">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <phone:Pivot Title="TALK TO ME">
+            <!--Pivot item one-->
+            <phone:PivotItem Header="about" Margin="12,10,12,0">
+                <StackPanel Margin="12,0,0,0">
+                    <TextBlock
+    					Text="Talk to Me"
+    					FontSize="40"
+    					Foreground="{StaticResource PhoneAccentBrush}"
+                    />
+                    <TextBlock
+    					Text="by Nick Landry"
+    					FontSize="28"
+    					Margin="0,8,0,12"
+                    />
+                    <TextBlock
+    					Text="Publisher: Big Bald Apps"
+    					FontSize="20"
+                    />
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+    						Text="Description:"
+    						FontSize="20"
+                        />
+                        <TextBlock
+    						Text="Mobile Text-to-Speech Application"
+    						FontSize="20"
+    						Margin="8,0,0,0"
+                        />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock
+    						Text="Version:"
+    						FontSize="20"
+                        />
+                        <TextBlock
+    						Text="1.0.0.0"
+    						FontSize="20"
+    						Foreground="{StaticResource PhoneAccentBrush}"
+    						Margin="8,0,0,0"
+                        />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock
+    						Text="Web:"
+    						FontSize="20"
+                        />
+                        <HyperlinkButton x:Name="urlWeb"
+    						Content="http://www.ActiveNick.net"
+    						FontSize="20"
+    						Foreground="{StaticResource PhoneAccentBrush}" Tap="urlWeb_Tap"
+                        />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                        <TextBlock
+    						Text="Feedback:"
+    						FontSize="20"
+                        />
+                        <HyperlinkButton x:Name="urlFeedback"
+    						Content="feedback@activenick.net"
+    						FontSize="20"
+    						Foreground="{StaticResource PhoneAccentBrush}" Tap="urlFeedback_Tap"
+                        />
+                    </StackPanel>
+                    <Button x:Name="btnReview" Content="Review this app!"
+    					Margin="0,12,0,0" Click="btnReview_Click"/>
+                    <Button x:Name="btnFollow" Content="follow @ActiveNick on Twitter"
+    					Margin="0,0,0,12" Click="btnFollow_Click"/>
+                </StackPanel>
+            </phone:PivotItem>
+
+            <!--Pivot item two-->
+            <phone:PivotItem Header="history">
+                <StackPanel Margin="12,0,0,12">
+                    <TextBlock
+    					Text="1.0.0.0"
+    					FontSize="40"
+    					Foreground="{StaticResource PhoneAccentBrush}"
+                    />
+                    <TextBlock
+    					Text="Initial public release."
+    					FontSize="20"
+                    />
+                </StackPanel>
+            </phone:PivotItem>
+
+            <!--Pivot item three-->
+            <phone:PivotItem Header="credits">
+                <StackPanel Margin="12,0,12,12">
+                    <TextBlock
+    					Text="Designed &amp; developed by Nick Landry."
+    					FontSize="20"
+                    />
+                    <TextBlock
+    					Text="This app was developed using NetAdvantage for Windows Phone controls from Infragistics."
+    					FontSize="20"
+                        Margin="0,8,0,12"
+    					TextWrapping="Wrap"/>
+                    <TextBlock
+    					Text="Additional thanks to"
+    					FontSize="28"
+                        Foreground="{StaticResource PhoneAccentBrush}"
+    					Margin="0,8,0,12"/>
+                    <TextBlock
+    					Text="Brent Schooley, for great UX tips,"
+    					FontSize="20" Margin="0,8,0,0"/>
+                    <TextBlock
+    					Text="Jason Beres, for the coolest job ever,"
+    					FontSize="20" Margin="0,8,0,0"/>
+                    <TextBlock
+    					Text="Dean Guida, for the coolest company ever,"
+    					FontSize="20" Margin="0,8,0,0"/>
+                    <TextBlock
+    					Text="the Microsoft Windows Phone Dev Tools team, for the coolest phone platform and SDK,"
+    					FontSize="20" Margin="0,8,0,0"
+    					TextWrapping="Wrap"
+                        />
+                    <TextBlock
+    					Text="and"
+    					FontSize="20" Margin="0,8,0,0"/>
+                    <TextBlock
+    					Text="Ishani Landry, for being the greatest and sweetest wife a geek could ever hope for."
+    					FontSize="20" Margin="0,8,0,0"
+    					TextWrapping="Wrap"
+                        />
+                </StackPanel>
+            </phone:PivotItem>
+        </phone:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
